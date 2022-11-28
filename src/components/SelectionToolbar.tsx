@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Portal } from "react-portal";
+// import { Portal } from "react-portal";
 import some from "lodash/some";
 import { EditorView } from "prosemirror-view";
 import { TextSelection } from "prosemirror-state";
@@ -219,7 +219,6 @@ export default class SelectionToolbar extends React.Component<Props> {
     }
 
     return (
-      <Portal>
         <FloatingToolbar
           view={view}
           active={isVisible(this.props)}
@@ -239,7 +238,6 @@ export default class SelectionToolbar extends React.Component<Props> {
             <ToolbarMenu items={items} {...rest} />
           )}
         </FloatingToolbar>
-      </Portal>
     );
   }
 }

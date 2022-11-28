@@ -266,18 +266,12 @@ export default class Image extends Node {
             />
           </Button>
           <ImageZoom
-            image={{
+            zoomImg={{
               src,
               alt,
               title,
-            }}
-            defaultStyles={{
-              overlay: {
-                backgroundColor: theme.background,
-              },
-            }}
-            shouldRespectMaxDimension
-          />
+            }}>
+          </ImageZoom>
         </ImageWrapper>
         <Caption
           onKeyDown={this.handleKeyDown(props)}

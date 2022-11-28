@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Portal } from "react-portal";
 import { EditorView } from "prosemirror-view";
 import useComponentSize from "../hooks/useComponentSize";
 import useMediaQuery from "../hooks/useMediaQuery";
@@ -162,7 +161,6 @@ function FloatingToolbar(props) {
   // only render children when state is updated to visible
   // to prevent gaining input focus before calculatePosition runs
   return (
-    <Portal>
       <Wrapper
         active={props.active && position.visible}
         ref={menuRef}
@@ -174,7 +172,6 @@ function FloatingToolbar(props) {
       >
         {position.visible && props.children}
       </Wrapper>
-    </Portal>
   );
 }
 

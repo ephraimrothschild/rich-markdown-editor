@@ -1,6 +1,5 @@
 import * as React from "react";
 import capitalize from "lodash/capitalize";
-import { Portal } from "react-portal";
 import { EditorView } from "prosemirror-view";
 import { findDomRefAtPos, findParentNode } from "prosemirror-utils";
 import styled from "styled-components";
@@ -460,7 +459,6 @@ class CommandMenu<T = MenuItem> extends React.Component<Props<T>, State> {
     const { insertItem, ...positioning } = this.state;
 
     return (
-      <Portal>
         <Wrapper
           id={this.props.id || "block-menu-container"}
           active={isActive}
@@ -524,7 +522,6 @@ class CommandMenu<T = MenuItem> extends React.Component<Props<T>, State> {
             </VisuallyHidden>
           )}
         </Wrapper>
-      </Portal>
     );
   }
 }
